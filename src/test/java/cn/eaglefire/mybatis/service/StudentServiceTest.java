@@ -29,6 +29,7 @@ public class StudentServiceTest {
 
     @Test
     public void testFindAllStudents(){
+        //查询全部数据
         List<Student> students = studentService.findAllStudents();
         Assert.assertNotNull(students);
         for (Student student: students){
@@ -48,6 +49,7 @@ public class StudentServiceTest {
 
     @Test
     public void testFindStudentById(){
+        //查询数据
         Student student = studentService.findStudentById(1);
         Assert.assertNotNull(student);
         System.out.println(student.getStudId()+" "+student.getName()+" "+student.getEmail());
@@ -55,7 +57,8 @@ public class StudentServiceTest {
 
     @Test
     public void testInsertStudent(){
-        Integer studId = 4;
+        //插入数据
+        Integer studId = 6;
         Student student = new Student.Builder()
                 .studId(studId)
                 .name("张雨绮")
